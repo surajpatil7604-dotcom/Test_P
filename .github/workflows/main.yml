@@ -1,1 +1,29 @@
 
+name: pipeline1
+on:
+   push:
+      branches:
+        - main
+jobs:
+    run-python-code:
+    runs-on: ubuntu-latest
+     
+    step:
+      -name: checkout code
+      uses: action/checkout@v7
+
+      -name: print python version 
+      run: python --version 
+    -name: set up python version
+    uses: actions/setup-python@v7
+    with:
+    python-version: '3.13' 
+      
+    -name: print python version
+    run: python --version
+
+    -name: run python program
+    run: python welcome.py
+
+
+
