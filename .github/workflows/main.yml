@@ -10,7 +10,7 @@ jobs:
      
     steps:
        - name: checkout code
-         uses: action/checkout@v7
+         uses: action/checkout@v4
 
        - name: print python version 
          run: python --version 
