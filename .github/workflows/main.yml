@@ -5,18 +5,18 @@ on:
       branches:
         - main
 jobs:
-    run-python-code:
-      runs-on: ubuntu-latest
+  run-python-code:
+    runs-on: ubuntu-latest
      
-      steps:
-         -name: checkout code
-         uses: action/checkout@v7
+    steps:
+       -name: checkout code
+       uses: action/checkout@v7
 
-         -name: print python version 
-         run: python --version 
+      -name: print python version 
+       run: python --version 
 
-        -name: run python program
-         run: python welcome.py
+      -name: run python program
+       run: python welcome.py
 
 
 
